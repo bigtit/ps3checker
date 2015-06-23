@@ -2,6 +2,7 @@
 #include <vector>
 #include <iomanip>
 #include "checker.h"
+#include "pbase.h"
 using std::cout;
 
 #define error(str) \
@@ -40,7 +41,7 @@ bool checker::chk_stat(std::ifstream& fin){
     if(tmp==0x00) ++count0;
     else if(tmp==0xff) ++countf;
   }
-  // show result
+  // show results
   cout.setf(std::ios::fixed);
   cout << std::setprecision(2) << "0x00: " << 100*(double)count0/pos << "% ";
   cout << ((count0>3083652 && count0<4867070)? "ok":"bad") << "\n";
@@ -55,6 +56,7 @@ void checker::chk_hdr(std::ifstream& fin){
   fin.seekg(0, std::ios::beg); // here we start
   std::vector<char> tmp(16);
   fin.read(&tmp[0], 16); // blank/unknown
+  if()
   fin.read(&tmp[0], 16); // magic no.
   fin.read(&tmp[0], 16); // size of magic no. area
   return;
