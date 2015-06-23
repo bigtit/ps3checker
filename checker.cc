@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <vector>
 #include <iomanip>
 #include "checker.h"
 using std::cout;
