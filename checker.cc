@@ -14,7 +14,7 @@ void status(string str){
 void checker::do_check(string name, bool swap){
   std::ifstream freader(name.c_str(), std::ios::binary);
   freader >> std::noskipws;
-  chk_stat(freader);
+  if(!chk_stat(freader)) return;
   return;
 }
 

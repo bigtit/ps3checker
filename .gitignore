@@ -1,6 +1,7 @@
 # unix executive
 *
 !*.*
+*.swp
 # Compiled Object files
 *.slo
 *.lo
